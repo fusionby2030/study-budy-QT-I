@@ -1,0 +1,93 @@
+\documentclass[10pt, a4paper]{memoir}
+\usepackage{graphicx} % SO I CAN DO TWO IMAGES IN ONE PLACE HEHE
+\usepackage{subcaption} % SEE ABOVE
+\usepackage{hyperref} % EVERYTHING IS LINKED TO EVERYTHING ELSE ISN'T IT GREAT
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\graphicspath{ {./src/}} % LOCATION OF IMAGES
+
+\title{Quantum Technology I, Lecture Notes}
+\date{WS20/21}
+
+
+
+% SO ANGSTROM IS NOT TAKING SO LONG TO TYPE I AM LAZY
+\newcommand{\angstrom}{\textup{\AA}}
+
+% FOR THE QUOTES
+\epigraphfontsize{\small\itshape}
+\setlength\epigraphwidth{10cm}
+\setlength\epigraphrule{0pt}
+
+
+\newenvironment{myitemize} % list then do not look so big and dumb
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  }
+
+
+\settypeblocksize{0.8\stockheight}{0.7\stockwidth}{*}
+\setlrmargins{*}{*}{1.2}
+\setulmargins{*}{*}{1.4}
+\checkandfixthelayout[nearest]
+
+\begin{document}
+
+\maketitle
+\frontmatter
+\tableofcontents*
+
+
+\mainmatter
+\include{introduction}
+\include{ionsources}
+\include{particleaccelerators}
+\include{transport}
+\include{beamparameters}
+\include{basicsofinteraction}
+\include{interaction2}
+\include{ionrange}
+\include{channeling}
+\include{beammethods}
+\include{ionbeamsinsemiconductor}
+
+\begin{thebibliography}{9}
+
+\bibitem{1}
+Harold Patterson Mahon.
+\textit{Design of an electrostatic deflector for the ion beam of the Oregon State College cyclotron}.
+Oregon State University, 1954.
+
+\bibitem{2}
+Richard Rhodes
+\textit{The Making of the Atomic Bomb}
+Simon and Schuster, 1986
+
+\bibitem{3}
+J. F. Ziegler, J. P. Biersack, and U. Littmark.
+\textit{The stopping and range of ions in solids},
+The stopping and ranges of ions in matter, vol 1,
+Pergamon Press, New York, New York, 1985.
+
+\bibitem{4}
+University of Helsinki.
+\textit{Notes on Plasma Physics}.
+\href{http://beam.helsinki.fi/~knordlun/mdh/rangetext.html}{online}.
+
+\bibitem{5}
+Vittone Ettore.
+\textit{Semiconductor Characterization by Scanning Ion Beam Induced Charge (IBIC) Microscopy}.
+International Scholarly Research Notices, 2013.
+\href{https://doi.org/10.1155/2013/637608}{doi}
+
+\bibitem{chen}
+Francis F. Chen.
+\textit{Introduction to Plasma Physics},
+Plenum Publishing, New York, New York, 1977
+
+\end{thebibliography}
+
+\end{document}
